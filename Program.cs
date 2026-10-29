@@ -66,7 +66,51 @@ namespace Topic_8_Lists_Assignment
             {
                 numbers.Add(random.Next(minimum, maximum + 1));
             }
-            // Print the text
+            
+
+            Console.WriteLine();
+            Console.WriteLine("Original list: ");
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                Console.Write(numbers[i] + " ");
+            }
+
+            Console.WriteLine();
+
+
+            Console.Write("Enter a number to count: ");
+            int searchNumber = Convert.ToInt32(Console.ReadLine());
+
+            int count = 0;
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] == searchNumber)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine(searchNumber + " appears " + count + "times.");
+
+
+            Console.Write("Enter a number to replace with zero: ");
+
+            int replaceNumber = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] == replaceNumber)
+                {
+                    numbers[i] = 0;
+                }
+            }
+
+
+            Console.WriteLine();
+            Console.WriteLine("List after replacing numbers: ");
+
+
         }
     }
 }
